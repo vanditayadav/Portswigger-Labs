@@ -12,13 +12,13 @@ The server must verify that reset credentials belong to the requesting user.
 
 Methodology
 
-Trigger reset.
+1.Trigger reset.
 
-Observe token behavior.
+2.Observe token behavior.
 
-Test parameter modifications.
+3.Test parameter modifications.
 
-Analyze verification logic.
+4.Analyze verification logic.
 
 Key Observation
 
