@@ -1,45 +1,63 @@
 Tools Used: Burp Suite Intruder
 
-Objective
+Goal
 
-Understand how different authentication responses reveal valid users.
+Find out whether the website accidentally reveals if a username exists.
 
-Vulnerability Overview
+My First Thought
 
-The application leaks account existence through inconsistent error messages.
+I thought every failed login should show exactly the same message.
 
-Tactical Mindset
+For example:
 
-If the application says more than "Invalid credentials," it may accidentally reveal user existence.
+"Invalid username or password"
 
-Methodology
+A secure application should not tell us whether the username exists.
 
-1.Intercept login request.
+The Main Idea
 
-2.Send to Intruder.
+Imagine knocking on apartment doors.
 
-3.Target username parameter.
+Door 1 says: "Nobody lives here."
 
-4.Use username wordlist.
+Door 2 says: "Wrong key."
 
-5.Compare response lengths or Grep-Match.
+Now I already know someone lives behind Door 2.
 
-Key Observation
+The same thing happens with websites.
 
-A valid username produced a structurally different response.
+What I Tried
+Intercepted login request
+Sent request to Intruder
+Tried multiple usernames
+Kept password same
+Compared responses
+What I Noticed
 
-Security Impact
+Most responses looked similar.
 
-User enumeration reduces attack effort and enables targeted brute forcing.
+But one response had a different length and behavior.
 
-Defensive Fix
+That small difference became a clue.
 
-Use generic authentication messages
+Why I Changed My Thinking
 
-Normalize responses
+Initially I focused on passwords.
 
-Apply rate limiting
+Then I realized the username itself was leaking information.
 
-Key Learning
+Why It Worked
 
-Small response differences create major information leaks.
+The website handled real users and fake users differently.
+
+Impact
+
+Attackers can find valid users before attacking passwords.
+
+Fix
+
+Always return identical error messages.
+
+What I Learned
+
+Tiny differences sometimes reveal huge problems.
