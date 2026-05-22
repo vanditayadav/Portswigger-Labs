@@ -1,7 +1,3 @@
-Platform: PortSwigger Web Security Academy
-
-Category: Authentication
-
 Tools Used: Burp Suite Intruder
 
 Objective
@@ -18,15 +14,15 @@ If the application says more than "Invalid credentials," it may accidentally rev
 
 Methodology
 
-Intercept login request.
+1.Intercept login request.
 
-Send to Intruder.
+2.Send to Intruder.
 
-Target username parameter.
+3.Target username parameter.
 
-Use username wordlist.
+4.Use username wordlist.
 
-Compare response lengths or Grep-Match.
+5.Compare response lengths or Grep-Match.
 
 Key Observation
 
