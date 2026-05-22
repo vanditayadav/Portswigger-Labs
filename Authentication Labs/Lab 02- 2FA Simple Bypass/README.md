@@ -14,13 +14,13 @@ Access control must verify authentication state, not assume workflow completion.
 
 Methodology
 
-Login normally.
+1.Login normally.
 
-Reach OTP page.
+2.Reach OTP page.
 
-Change destination URL.
+3.Change destination URL.
 
-Attempt direct access.
+4.Attempt direct access.
 
 Key Observation
 
