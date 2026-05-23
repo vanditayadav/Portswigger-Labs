@@ -1,35 +1,39 @@
-Objective
+Goal
 
-Detect timing side channels.
+Use speed differences to find users.
 
-Vulnerability Overview
+My First Thought
 
-Valid accounts require additional processing time.
+Maybe time itself gives clues.
 
-Tactical Mindset
+The Main Idea
 
-Server processing behavior can reveal hidden information.
+Real users may require extra processing. Extra work = extra time.
 
-Methodology
+What I Tried
 
-1.Send username wordlist.
+Sent requests and watched response times.
 
-2.Use long passwords.
+What I Noticed
 
-3.Compare response times.
+Some requests took slightly longer.
 
-Key Observation
+Why I Changed My Thinking
 
-Valid users generated slower responses.
+I stopped reading text and started watching behavior.
 
-Security Impact
+Why It Worked
 
-Allows account discovery.
+Real accounts triggered more server work.
 
-Defensive Fix
+Impact
 
-Use constant-time processing.
+Can reveal users.
 
-Key Learning
+Fix
 
-Time itself can leak secrets.
+Use constant processing time.
+
+What I Learned
+
+Even time can leak secrets.
