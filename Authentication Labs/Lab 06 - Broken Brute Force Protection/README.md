@@ -1,31 +1,31 @@
-Objective
+Goal
 
-Test brute-force defense mechanisms.
+Test whether protection logic really protects.
 
-Vulnerability Overview
+My First Thought
 
-Counter reset logic was exploitable.
+Security protections should also be tested.
 
-Tactical Mindset
+What I Tried
 
-Protection logic can become attack surface.
+Alternated successful and failed logins.
 
-Methodology
+What I Noticed
 
-Alternate failed and successful login behavior.
+Counters kept resetting.
 
-Key Observation
+Why It Worked
 
-Counters reset unexpectedly.
+The website trusted successful logins too much.
 
-Security Impact
+Impact
 
-Brute force defenses become bypassable.
+Protection became bypassable.
 
-Defensive Fix
+Fix
 
-Separate counters from successful logins.
+Keep separate tracking logic.
 
-Key Learning
+What I Learned
 
-Security controls need abuse testing.
+Security features can also contain bugs.
