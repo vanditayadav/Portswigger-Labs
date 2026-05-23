@@ -1,31 +1,43 @@
-Objective
+Goal
 
-Analyze persistent cookie construction.
+Understand how persistent login cookies work.
 
-Vulnerability Overview
+My First Thought
 
-Predictable cookie structure enabled offline generation.
+Cookies should look random and unpredictable.
 
-Tactical Mindset
+The Main Idea
 
-Weak token design equals weak authentication.
+Imagine a lock where the key pattern is always:
 
-Methodology
+Name + Password Formula
 
-Decode cookie structure and analyze patterns.
+If someone discovers the formula, they can create new keys.
 
-Key Observation
+What I Tried
 
-Cookie values followed deterministic logic.
+Decoded cookie values and observed patterns.
 
-Security Impact
+What I Noticed
 
-Authentication bypass possible.
+Cookie values followed a predictable structure.
 
-Defensive Fix
+Why I Changed My Thinking
 
-Use secure random session tokens.
+I stopped seeing cookies as random values and started treating them like data.
 
-Key Learning
+Why It Worked
 
-Never build security from predictable values.
+The website generated authentication values using predictable logic.
+
+Impact
+
+Could allow login without knowing credentials.
+
+Fix
+
+Use secure random tokens.
+
+What I Learned
+
+Predictable patterns weaken security.
