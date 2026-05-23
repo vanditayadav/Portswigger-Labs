@@ -1,31 +1,57 @@
-Objective
+Goal
 
-Automate multi-step workflows.
+Understand how automation affects authentication systems.
 
-Vulnerability Overview
+My First Thought
 
-Authentication process allowed repeatable automated recovery.
+Repeated failures should stop brute force attempts.
 
-Tactical Mindset
+The Main Idea
 
-Complex workflows can be chained and automated.
+Humans become slow when repeating many steps.
 
-Methodology
+Automation removes that difficulty.
 
-Create session-handling automation.
+What I Tried
 
-Key Observation
+Observed repeated login behavior and session flow.
 
-Session regeneration enabled continuous attempts.
+What I Noticed
 
-Security Impact
+Fresh sessions allowed continuous attempts.
 
-Can weaken OTP security.
+Why I Changed My Thinking
 
-Defensive Fix
+Instead of focusing only on OTP values, I looked at the whole workflow.
 
-Rate limit OTP verification and invalidate sessions.
+Why It Worked
 
-Key Learning
+Automation recreated the required steps repeatedly.
 
-Automation changes attack capability.
+Impact
+
+Can weaken OTP security
+
+Fix
+
+- Limit how many OTP attempts a user can make in a short time.
+
+- Lock or temporarily pause verification after multiple failed attempts.
+
+- Create a new OTP after repeated failures.
+
+- Expire old sessions and tokens quickly.
+
+- Monitor unusual repeated activity that looks automated.
+
+The goal is not only to protect the OTP itself, but also the entire login workflow around it.
+
+What I Learned
+
+Before this lab, I mostly thought security depended on strong passwords or strong OTP codes.
+
+This lab showed me that the process around security matters too.
+
+Even if OTP is strong, automation can repeatedly perform actions much faster than humans.
+
+I learned that attackers do not only attack values like passwords or codes — they also attack workflows and repeated processes.
