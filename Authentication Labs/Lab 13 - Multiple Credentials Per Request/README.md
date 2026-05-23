@@ -1,31 +1,43 @@
-Objective
+Goal
 
-Test JSON parsing abuse.
+Test whether one request can contain many login attempts.
 
-Vulnerability Overview
+My First Thought
 
-Application processed multiple credentials in one request.
+One request should equal one attempt.
 
-Tactical Mindset
+The Main Idea
 
-Rate limiting often assumes one request equals one attempt.
+Imagine a guard allows one person through a gate at a time.
 
-Methodology
+Someone arrives carrying a bus full of people.
 
-Analyze input structure flexibility.
+The guard only counts one vehicle.
 
-Key Observation
+What I Tried
 
-Arrays bypassed intended logic.
+Observed how request data was processed.
 
-Security Impact
+What I Noticed
 
-Rate-limit bypass.
+The application accepted unexpected formats.
 
-Defensive Fix
+Why I Changed My Thinking
 
-Validate request schema strictly.
+I shifted focus from request count to request content.
 
-Key Learning
+Why It Worked
 
-Unexpected formats create unexpected behavior.
+Input handling allowed multiple attempts together.
+
+Impact
+
+Rate limiting becomes weaker.
+
+Fix
+
+Validate input structure carefully.
+
+What I Learned
+
+Unexpected formats create unexpected problems.
