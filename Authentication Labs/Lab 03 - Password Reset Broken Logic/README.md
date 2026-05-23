@@ -1,39 +1,47 @@
-Objective
+Goal
 
-Analyze password reset token validation.
+Check whether reset tokens truly belong to users.
 
-Vulnerability Overview
+My First Thought
 
-Reset workflow improperly validates ownership of reset tokens.
+Password reset links should only work for their owner.
 
-Tactical Mindset
+The Main Idea
 
-The server must verify that reset credentials belong to the requesting user.
+Imagine someone receives a movie ticket.
 
-Methodology
+The security guard checks:
 
-1.Trigger reset.
+"Is this a real ticket?"
 
-2.Observe token behavior.
+But forgets:
 
-3.Test parameter modifications.
+"Does this ticket belong to this person?"
 
-4.Analyze verification logic.
+What I Tried
 
-Key Observation
+Observed reset requests and changed parameters.
 
-Token validation logic did not correctly bind user identity.
+What I Noticed
 
-Security Impact
+Token checking existed but ownership checking looked weak.
+
+Why I Changed My Thinking
+
+I focused less on whether token existed and more on who owned it.
+
+Why It Worked
+
+The website checked token validity but not ownership properly.
+
+Impact
 
 Can lead to account takeover.
 
-Defensive Fix
+Fix
 
-Bind tokens to sessions/users
+Bind tokens to users strongly.
 
-Verify ownership server-side
+What I Learned
 
-Key Learning
-
-Never trust user-controlled reset parameters.
+Correct values alone are not enough. Relationships matter too.
