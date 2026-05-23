@@ -1,31 +1,45 @@
-Objective
+Goal
 
-Study trust boundaries in request metadata.
+Check whether password reset links trust user input.
 
-Vulnerability Overview
+My First Thought
 
-Server trusted externally supplied host values.
+Password reset links should always come from trusted sources.
 
-Tactical Mindset
+The Main Idea
 
-Never trust routing data from clients.
+Imagine a delivery company asks customers:
 
-Methodology
+"Which address should we deliver to?"
 
-Analyze reset link generation.
+and trusts whatever is written.
 
-Key Observation
+That can become dangerous.
 
-Generated links relied on mutable request data.
+What I Tried
 
-Security Impact
+Observed how reset links were created.
 
-Password reset theft possible.
+What I Noticed
 
-Defensive Fix
+The website trusted information coming from requests.
 
-Use fixed trusted domains.
+Why I Changed My Thinking
 
-Key Learning
+I focused less on reset tokens and more on where links were generated.
 
-Metadata can become attack surface.
+Why It Worked
+
+The application trusted external routing information.
+
+Impact
+
+Reset links may be redirected toward attackers.
+
+Fix
+
+Use trusted server-side domains only.
+
+What I Learned
+
+Even supporting information can become dangerous.
