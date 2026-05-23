@@ -1,35 +1,43 @@
-Objective
+Goal
 
-Identify accounts through tiny response differences.
+Find users through very tiny differences.
 
-Vulnerability Overview
+My First Thought
 
-Formatting variations reveal valid usernames.
+Everything looked identical.
 
-Tactical Mindset
+The Main Idea
 
-Sometimes exploitation is observation rather than force.
+Sometimes clues are like finding one spelling mistake in a whole book.
 
-Methodology
+What I Tried
 
-1.Attack username parameter.
+Compared exact outputs.
 
-2.Use Grep-Extract.
+What I Noticed
 
-3.Compare punctuation or formatting.
+Tiny differences:
 
-Key Observation
+punctuation,
+spacing,
+formatting
 
-Small formatting inconsistencies exposed account validity.
+Why I Changed My Thinking
 
-Security Impact
+I stopped looking for obvious differences.
 
-Supports credential attacks.
+Why It Worked
 
-Defensive Fix
+Different paths inside code created tiny changes.
 
-Standardize all responses.
+Impact
 
-Key Learning
+Can reveal users.
 
-Micro-differences matter.
+Fix
+
+Keep all responses identical.
+
+What I Learned
+
+Observation is powerful.
