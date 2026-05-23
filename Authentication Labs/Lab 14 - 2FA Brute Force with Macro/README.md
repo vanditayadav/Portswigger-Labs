@@ -1,3 +1,5 @@
+Tool: Macro + Intruder
+
 Goal
 
 Understand how automation affects authentication systems.
@@ -10,7 +12,33 @@ The Main Idea
 
 Humans become slow when repeating many steps.
 
-Automation removes that difficulty.
+Automation removes that difficulty. Here comes Macro.
+
+What is a Macro?
+
+A macro is a way to automate a sequence of repeated actions.
+
+Instead of manually doing the same steps again and again, the tool performs them automatically in the same order.
+
+In this lab, the website required multiple steps before reaching the OTP page:
+
+- Login
+
+- Create a session
+
+- Get fresh values/tokens
+
+- Reach OTP verification
+
+Doing this manually for every OTP guess would be slow.
+
+So a macro repeated these steps automatically before each new attempt.
+
+Think of it like recording a small routine:
+
+Step 1 → Step 2 → Step 3 → repeat automatically
+
+This saves time and allows testing to continue smoothly.
 
 What I Tried
 
