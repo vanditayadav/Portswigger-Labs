@@ -1,41 +1,49 @@
-Tools Used: Browser + Burp Suite
+Tools Used: Browser + Burp
 
-Objective
+Goal
 
-Determine whether 2FA is enforced server-side.
+Check whether OTP protection is actually enforced.
 
-Vulnerability Overview
+My First Thought
 
-Application creates a partially authenticated session before OTP validation.
+I assumed OTP must always be completed before account access.
 
-Tactical Mindset
+The Main Idea
 
-Access control must verify authentication state, not assume workflow completion.
+Imagine a mall security guard checks your ticket but forgets to check whether you passed the final gate.
 
-Methodology
+You may still enter.
 
-1.Login normally.
+What I Tried
 
-2.Reach OTP page.
+Logged in and stopped at OTP page.
 
-3.Change destination URL.
+Instead of entering OTP, I manually changed the URL.
 
-4.Attempt direct access.
+What I Noticed
 
-Key Observation
+Protected pages were still opening.
 
-Protected resources were accessible without OTP completion.
+Why I Changed My Thinking
 
-Security Impact
+I stopped thinking about OTP numbers.
 
-2FA protection becomes ineffective.
+Instead I wondered:
 
-Defensive Fix
+"Does the website already think I am logged in?"
 
-Verify 2FA server-side
+Why It Worked
 
-Block access before verification completion
+The website partly trusted me after password verification.
 
-Key Learning
+Impact
 
-Authentication flow logic matters as much as authentication itself.
+Someone with credentials could skip OTP.
+
+Fix
+
+Check OTP completion on server side.
+
+What I Learned
+
+Security sometimes fails because of wrong assumptions.
