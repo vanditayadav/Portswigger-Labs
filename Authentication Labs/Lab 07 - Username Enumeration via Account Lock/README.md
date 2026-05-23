@@ -1,31 +1,31 @@
-Objective
+Goal
 
-Identify users through lockout behavior.
+See if lockout behavior reveals users.
 
-Vulnerability Overview
+My First Thought
 
-Lockout state exposed account existence.
+Maybe real users behave differently.
 
-Tactical Mindset
+What I Tried
 
-State changes reveal information.
+Observed repeated login failures.
 
-Methodology
+What I Noticed
 
-Observe response changes after repeated failures.
+Real accounts entered lock state.
 
-Key Observation
+Why It Worked
 
-Locked accounts behaved differently.
+Application behavior changed.
 
-Security Impact
+Impact
 
-Enables user discovery.
+User discovery.
 
-Defensive Fix
+Fix
 
-Use generic lockout responses.
+Normalize responses.
 
-Key Learning
+What I Learned
 
-Behavioral shifts reveal secrets.
+Behavior itself becomes a clue.
