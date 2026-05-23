@@ -1,31 +1,41 @@
-Objective
+Goal
 
-Assess OTP identity tracking.
+Check whether OTP verification correctly stays linked to the right user.
 
-Vulnerability Overview
+My First Thought
 
-User-controlled tracking values influenced OTP workflow.
+I assumed OTP codes should always stay connected to one user account.
 
-Tactical Mindset
+The Main Idea
 
-Authentication state must live on server-side sessions.
+Imagine a school gives roll numbers for an exam, but students can freely change the roll number written on their sheet.
 
-Methodology
+That would create confusion.
 
-Analyze tracking values and identity flow.
+What I Tried
 
-Key Observation
+Observed how the website tracked identity during OTP verification.
 
-Identity linkage relied on client-controlled data.
+What I Noticed
 
-Security Impact
+Some values controlling identity looked editable.
 
-Could allow account compromise.
+Why I Changed My Thinking
 
-Defensive Fix
+Instead of focusing on the OTP itself, I focused on how the application remembered users.
 
-Use server-side session identifiers.
+Why It Worked
 
-Key Learning
+The website relied too much on user-controlled information.
 
-Client input should never define identity.
+Impact
+
+May allow access to another account.
+
+Fix
+
+Store identity only on server-side sessions.
+
+What I Learned
+
+Identity should never be controlled by users.
