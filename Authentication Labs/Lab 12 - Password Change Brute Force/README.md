@@ -1,31 +1,39 @@
-Objective
+Goal
 
-Assess internal password change security.
+Test whether password change functionality leaks information.
 
-Vulnerability Overview
+My First Thought
 
-Validation behavior leaked password correctness.
+Most protections focus only on login pages.
 
-Tactical Mindset
+The Main Idea
 
-Security often focuses only on login pages.
+Sometimes side doors are weaker than the main entrance.
 
-Methodology
+What I Tried
 
-Analyze response differences.
+Observed behavior while testing password changes.
 
-Key Observation
+What I Noticed
 
-Error variations exposed valid credentials.
+Error messages changed depending on input.
 
-Security Impact
+Why I Changed My Thinking
 
-Password guessing becomes easier.
+I realized internal features may reveal hidden clues.
 
-Defensive Fix
+Why It Worked
 
-Normalize responses.
+The application accidentally revealed information through validation.
 
-Key Learning
+Impact
 
-Internal functionality requires equal protection.
+Can help attackers guess passwords.
+
+Fix
+
+Use identical responses.
+
+What I Learned
+
+Internal pages need security too.
