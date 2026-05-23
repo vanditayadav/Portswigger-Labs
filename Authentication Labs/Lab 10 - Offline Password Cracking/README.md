@@ -1,31 +1,43 @@
-Objective
+Goal
 
-Study interaction between XSS and authentication.
+Understand how small vulnerabilities can combine.
 
-Vulnerability Overview
+My First Thought
 
-Weak cookie security exposed credential material.
+One vulnerability alone may not look dangerous.
 
-Tactical Mindset
+The Main Idea
 
-Small vulnerabilities chain into larger attacks.
+Imagine two weak doors.
 
-Methodology
+One lets someone enter. Another lets someone open a locker.
 
-Analyze cookie exposure and session protection.
+Together they create a bigger problem.
 
-Key Observation
+What I Tried
 
-Sensitive session data was accessible.
+Observed how session cookies behaved.
 
-Security Impact
+What I Noticed
 
-Can expose passwords and sessions.
+Sensitive information could be accessed.
 
-Defensive Fix
+Why I Changed My Thinking
 
-Enable HttpOnly and secure cookie flags.
+I stopped treating XSS and authentication as separate problems.
 
-Key Learning
+Why It Worked
 
-Security failures often compound.
+Weak cookie protection and another vulnerability worked together.
+
+Impact
+
+Could expose passwords or sessions.
+
+Fix
+
+Use HttpOnly and secure cookie settings.
+
+What I Learned
+
+Small flaws can combine into large attacks.
